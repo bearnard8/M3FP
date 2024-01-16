@@ -27,15 +27,38 @@
     -> second footer con licenza
  -->
 
- <nav class="navbar navbar-expand-lg">
+ <nav class="navbar navbar-expand-md navbar-dark">
     <div class="container-fluid">
+        <!-- Navbar brand -->
         <a class="navbar-brand" href="#">
             <img src="assets/imgs/Netflix_Logo_RGB.png" alt="Netflix Logo" class="img-fluid" style="height: 35px;">
         </a>
+
+        <!-- Right-side content -->
+        <div id="right-side" class="d-flex align-items-center justify-content-end ms-auto order-md-2">
+            <i class="fa-solid fa-magnifying-glass text-light px-2"></i>
+            <i class="fa-solid fa-bell text-light px-2"></i>
+            <a href="#" class="nav-link text-light px-2" id="category">KIDS</a>
+            <li class="nav-item dropdown p-0 d-flex">
+                <a class="nav-link dropdown-toggle" id="user-icon" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="assets/profile-picture.png" alt="Profile Picture">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </li>
+        </div>
+
+        <!-- Collapse button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon "></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse order-md-1" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link" href="#">Home</a>
@@ -54,50 +77,52 @@
                 </li>
             </ul>
         </div>
-        <div id="right-side" class="d-flex align-items-center justify-content-end">
-            <i class="fa-solid fa-magnifying-glass text-light px-2"></i>
-            <i class="fa-solid fa-bell text-light px-2"></i>
-            <a href="#" class="nav-link text-light px-2" id="category">KIDS</a>
-            <li class="nav-item dropdown p-0 d-flex">
-                <a class="nav-link dropdown-toggle" id="user-icon" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="assets/profile-picture.png" alt="Profile Picture">
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Logout</a></li>
-                </ul>
-            </li>
-        </div>
     </div>
 </nav>
 
+
+
 <section id="footer">
+    <div id="social-icons" class="d-flex container w-50 mb-1">
+        <a href="#" class="social-link">
+            <i class="fa-brands fa-square-facebook pe-3 pb-2"></i>
+        </a>
+        <a href="#" class="social-link">
+            <i class="fa-brands fa-instagram pe-3"></i>
+        </a>
+        <a href="#" class="social-link">
+            <i class="fa-brands fa-twitter pe-3"></i>
+        </a>
+        <a href="#" class="social-link">
+            <i class="fa-brands fa-youtube pe-3"></i>
+        </a>
+    </div>
     <div class="container w-50">
         <div class="row">
-            <div class="col-3 d-flex flex-column">
-                <a href="#" class="footer-link">Audio and Subtitles</a>
-                <a href="#" class="footer-link">Media Center</a>
-                <a href="#" class="footer-link">Privacy</a>
-                <a href="#" class="footer-link">Contact Us</a>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-12 d-flex flex-column">
+                <a href="#" class="footer-link pb-2">Audio and Subtitles</a>
+                <a href="#" class="footer-link pb-2">Media Center</a>
+                <a href="#" class="footer-link pb-2">Privacy</a>
+                <a href="#" class="footer-link pb-2">Contact Us</a>
             </div>
-            <div class="col-3 d-flex flex-column">
-                <a href="#" class="footer-link">Audio Description</a>
-                <a href="#" class="footer-link">Investor Relations</a>
-                <a href="#" class="footer-link">Legal Notices</a>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-12 d-flex flex-column">
+                <a href="#" class="footer-link pb-2">Audio Description</a>
+                <a href="#" class="footer-link pb-2">Investor Relations</a>
+                <a href="#" class="footer-link pb-2">Legal Notices</a>
             </div>
-            <div class="col-3 d-flex flex-column">
-                <a href="#" class="footer-link">Help Center</a>
-                <a href="#" class="footer-link">Jobs</a>
-                <a href="#" class="footer-link">Cookie Preferences</a>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-12 d-flex flex-column">
+                <a href="#" class="footer-link pb-2">Help Center</a>
+                <a href="#" class="footer-link pb-2">Jobs</a>
+                <a href="#" class="footer-link pb-2">Cookie Preferences</a>
             </div>
-            <div class="col-3 d-flex flex-column">
-                <a href="#" class="footer-link">Gift Cards</a>
-                <a href="#" class="footer-link">Terms of Use</a>
-                <a href="#" class="footer-link">Corporate Information</a>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-12 d-flex flex-column">
+                <a href="#" class="footer-link pb-2">Gift Cards</a>
+                <a href="#" class="footer-link pb-2">Terms of Use</a>
+                <a href="#" class="footer-link pb-2">Corporate Information</a>
             </div>
         </div>
+        <button id="service-btn" class="p-1">Service Code</button>
+        <p id="copywright" class="mt-2">© 1997-2019 Netflix, Inc. {i-0d00fcda2fdf9c0de}</p>
     </div>
 </section>
 

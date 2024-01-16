@@ -9,23 +9,50 @@ body {
 }
 
 #user-icon img {
-    width: 25px;
+    width: 20px;
 }
 
-.navbar-nav .nav-item, i, #category {
-    font-size: small!important;
+.navbar-nav .nav-item, i, #category, .dropdown-item {
+    font-size: x-small!important;
 }
 
-.navbar-nav .nav-link {
+@media (max-width: 1200px) {
+    .navbar-nav .nav-item, i, #category, .dropdown-item {
+        font-size: small!important;
+    }
+}
+
+.navbar-nav .nav-link, i, #service-btn, #copywright, .footer-link {
     color: #818181;
+}
+#social-icons i {
+    font-size: 25px!important;
 }
 
 #user-icon {
     color: white;
 }
 
-.footer-link {
-    color: #818181!important;
+.footer-link, #copywright {
     text-decoration: none;
     font-size: x-small;
+}
+
+#service-btn {
+    background-color: transparent;
+    font-size: 10px!important;
+    border: 1px solid #818181;
+}
+
+#service-btn:hover {
+    border: 1px solid rgb(194, 194, 194);
+    color: rgb(194, 194, 194);
+}
+
+a:hover {
+    color: rgb(194, 194, 194);
+}
+
+.social-link:hover i {
+    color: rgb(194, 194, 194);
 }
