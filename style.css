@@ -1,0 +1,31 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141414!important;
+}
+
+#user-icon img {
+    width: 25px;
+}
+
+.navbar-nav .nav-item, i, #category {
+    font-size: small!important;
+}
+
+.navbar-nav .nav-link {
+    color: #818181;
+}
+
+#user-icon {
+    color: white;
+}
+
+.footer-link {
+    color: #818181!important;
+    text-decoration: none;
+    font-size: x-small;
+}
