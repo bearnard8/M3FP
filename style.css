@@ -6,6 +6,7 @@
 
 body {
     background-color: #141414!important;
+    height: 1500px;
 }
 
 #user-icon img {
@@ -72,6 +73,12 @@ a:hover {
 .show-card:not(:hover) {
   transform: scale(1);
   transition: 0.3s all;
+}
+
+/*row appearing*/
+
+.disappear {
+  display: none;
 }
 
 /*scrollbar*/
