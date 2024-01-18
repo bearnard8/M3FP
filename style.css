@@ -13,18 +13,13 @@ body {
 }
 
 .navbar-nav .nav-item, i, #category, .dropdown-item {
-    font-size: x-small!important;
-}
-
-@media (max-width: 1200px) {
-    .navbar-nav .nav-item, i, #category, .dropdown-item {
-        font-size: small!important;
-    }
+    font-size: 15px!important;
 }
 
 .navbar-nav .nav-link, i, #service-btn, #copywright, .footer-link {
     color: #818181;
 }
+
 #social-icons i {
     font-size: 25px!important;
 }
@@ -35,7 +30,7 @@ body {
 
 .footer-link, #copywright {
     text-decoration: none;
-    font-size: x-small;
+    font-size: 12px;
 }
 
 #service-btn {
@@ -55,4 +50,44 @@ a:hover {
 
 .social-link:hover i {
     color: rgb(194, 194, 194);
+}
+
+#category-btn:focus {
+    box-shadow: none!important;
+}
+
+#list, #grid {
+    border-radius: 0!important;
+}
+
+/*card animation*/
+
+.show-card:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 25px rgb(0, 0, 0);
+  transition: 0.5s all;
+  z-index: 1;
+}
+
+.show-card:not(:hover) {
+  transform: scale(1);
+  transition: 0.3s all;
+}
+
+/*scrollbar*/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #636363;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #353535;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #494949;
 }

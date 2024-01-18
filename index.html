@@ -27,14 +27,11 @@
     -> second footer con licenza
  -->
 
- <nav class="navbar navbar-expand-md navbar-dark">
+<nav class="navbar navbar-expand-md navbar-dark">
     <div class="container-fluid">
-        <!-- Navbar brand -->
         <a class="navbar-brand" href="#">
             <img src="assets/imgs/Netflix_Logo_RGB.png" alt="Netflix Logo" class="img-fluid" style="height: 35px;">
         </a>
-
-        <!-- Right-side content -->
         <div id="right-side" class="d-flex align-items-center justify-content-end ms-auto order-md-2">
             <i class="fa-solid fa-magnifying-glass text-light px-2"></i>
             <i class="fa-solid fa-bell text-light px-2"></i>
@@ -51,13 +48,9 @@
                 </ul>
             </li>
         </div>
-
-        <!-- Collapse button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
-        <!-- Navbar links -->
         <div class="collapse navbar-collapse order-md-1" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -80,9 +73,95 @@
     </div>
 </nav>
 
+<div id="content" class="mx-5">
+    <section id="content-menu" class="container-fluid d-flex justify-content-between align-items-center px-0">
+        <div id="left" class="d-flex align-items-center">
+            <h2 class="text-light">TV Shows</h2>
+            <div class="dropdown">
+                <button class="btn btnscondary dropdown-toggle text-light border border-2 border-secondary p-1 mx-4" type="button" id="category-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                    Genres
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="category-btn">
+                    <li class="dropdown-item active">Drama</li>
+                    <li class="dropdown-item">Comedy</li>
+                    <li class="dropdown-item">Horror</li>
+                    <li class="dropdown-item">Documentary</li>
+                </ul>
+            </div>
+        </div>
+        <div id="right" class="btn-group d-flex justify-content-between p-0" role="group" aria-label="Visualization selection">
+            <button type="button" id="list" class="btn  btn-outline-secondary border border-2 border-secondary mx-0 px-3">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <button type="button" id="grid" class="btn btn-outline-secondary border border-2 border-start-0 border-secondary mx-0 px-3">
+                <i class="fa-solid fa-grip"></i>
+            </button>
+        </div>
+    </section>
 
+    <div class="container-fluid my-4">
+        <div class="row">
+            <h5 class="text-light mx-0 px-0">Trending Now</h5>
+            <img src="assets/imgs/movies/1.png" alt="Unorthodox" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/2.png" alt="After Life" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/3.png" alt="Vis a Vis" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/4.png" alt="the place" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/5.png" alt="Summertime" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/6.png" alt="I Delitti di Valhalla" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+        </div>
+    </div>
 
-<section id="footer">
+    <div class="container-fluid my-4">
+        <div class="row">
+            <h5 class="text-light mx-0 px-0">Wathc It Again</h5>
+            <img src="assets/imgs/movies/7.png" alt="L'altra Grace" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/8.png" alt="Virgin River" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/9.png" alt="The English Game" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/10.png" alt="Il metodo Kominsky" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/11.png" alt="Patto d'amore" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/12.png" alt="La Cada de las Flores" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+        </div>
+    </div>
+
+    <div class="container-fluid my-4">
+        <div class="row">
+            <h5 class="text-light mx-0 px-0">New Releases</h5>
+            <img src="assets/imgs/movies/13.png" alt="Collateral Beauty" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/14.png" alt="Self Made" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/15.png" alt="Freud" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/16.png" alt="Grace and Frankie" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/17.png" alt="Lasciati Andare" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/18.png" alt="Dogman" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+        </div>
+    </div>
+
+    <div class="container-fluid my-4">
+        <div class="row">
+            <h5 class="text-light mx-0 px-0">Trending Now</h5>
+            <img src="assets/imgs/movies/11.png" alt="Unorthodox" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/2.png" alt="After Life" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/13.png" alt="Vis a Vis" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/7.png" alt="the place" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/9.png" alt="Summertime" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/6.png" alt="I Delitti di Valhalla" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+        </div>
+    </div>
+
+    <div class="container-fluid my-4">
+        <div class="row">
+            <h5 class="text-light mx-0 px-0">Trending Now</h5>
+            <img src="assets/imgs/movies/18.png" alt="Unorthodox" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/5.png" alt="After Life" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/7.png" alt="Vis a Vis" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/14.png" alt="the place" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/15.png" alt="Summertime" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+            <img src="assets/imgs/movies/8.png" alt="I Delitti di Valhalla" class="img img-fluid col-lg-2 col-md-4 col-sm-6 p-0 m-0 show-card">
+        </div>
+    </div>
+
+</div>
+
+<section id="footer" class="mt-5">
     <div id="social-icons" class="d-flex container w-50 mb-1">
         <a href="#" class="social-link">
             <i class="fa-brands fa-square-facebook pe-3 pb-2"></i>
