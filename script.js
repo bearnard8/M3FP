@@ -66,21 +66,12 @@ function addRemoveDiv() {
 const carouselContainers = document.querySelectorAll('.disappear');
 console.log(carouselContainers);
 
-// Function to check if an element is in the viewport
-function isInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
+// Function to handle the intersection entries
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+    const carouselContainer = entry.target;
 
-// Function to toggle the visibility of the carousel containers
-function toggleCarouselVisibility() {
-  carouselContainers.forEach(carouselContainer => {
-    if (isInViewport(carouselContainer)) {
+    if (entry.isIntersecting) {
       carouselContainer.classList.add('visible');
     } else {
       carouselContainer.classList.remove('visible');
@@ -88,11 +79,20 @@ function toggleCarouselVisibility() {
   });
 }
 
-// Add event listener to check the visibility of the carousel containers on scroll
-window.addEventListener('scroll', toggleCarouselVisibility);
+// Options for the IntersectionObserver
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.3 // Adjust this threshold as needed
+};
 
-// Call the toggleCarouselVisibility function to initialize the visibility state
-toggleCarouselVisibility();
+// Create an IntersectionObserver
+const observer = new IntersectionObserver(handleIntersection, options);
+
+// Observe each carousel container
+carouselContainers.forEach(carouselContainer => {
+  observer.observe(carouselContainer);
+});
 
 
 
