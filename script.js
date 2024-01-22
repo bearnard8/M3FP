@@ -1,105 +1,49 @@
 /*aggiunta/rimozione div scrollando*/
 
-/*let addedDiv = document.getElementsByClassName("disappear");
+const disappearingDivs = document.querySelectorAll('.disappear');
 
-window.addEventListener("scroll", function() {
-    addRemoveDiv();
-})
-
-function addRemoveDiv() {
-    let y = window.scrollY;
-    let i = 0;
-    if (y>200 && y<400) {
-        addedDiv[i].style.display = "block";
-    } else if (y > 400) {
-        i += 1;
-        addedDiv[i].style.display = "block";
-    }
-    if (y < 200) {
-        addedDiv[i].style.display = "none";
-    } else if (y < 400) {
-        i+=1;
-        addedDiv[i].style.display = "none";
-    }
-}*/
-
-/*document.addEventListener('DOMContentLoaded', () => {
-    const disDiv = document.querySelectorAll('.disappear');
-    console.log(disDiv);
-
-    // Function to handle the intersection entries
-    const handleIntersection = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.remove('disappear');
-                console.log("removed");
-                observer.unobserve(entry.target);
-            } else {
-                entry.target.classList.add('disappear');
-                console.log("added");
-            }
-        });
-    };
-
-    // Options for the IntersectionObserver
-    const options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.5  // Adjust this threshold as needed
-    };
-
-    // Create an IntersectionObserver
-    const observer = new IntersectionObserver(handleIntersection, options);
-
-    // Select all elements with the class 'disappear' and observe them
-    disDiv.forEach(element => {
-        observer.observe(element);
-    });
-});*/
-
-// const disDiv = document.querySelectorAll('.disappear');
-
-
-
-
-
-const carouselContainers = document.querySelectorAll('.disappear');
-console.log(carouselContainers);
-
-// Function to handle the intersection entries
+// funzione applicata a ogni elemento ispezionato dall'observer
 function handleIntersection(entries, observer) {
   entries.forEach(entry => {
-    const carouselContainer = entry.target;
+    const disappearingDiv = entry.target;
 
     if (entry.isIntersecting) {
-      carouselContainer.classList.add('visible');
+      disappearingDiv.classList.add('visible');
     } else {
-      carouselContainer.classList.remove('visible');
+      disappearingDiv.classList.remove('visible');
     }
   });
 }
 
-// Options for the IntersectionObserver
-const options = {
-  root: null,
+// opzioni dell'observer
+const info = {
+  root: null, //riferimento del viewport
   rootMargin: '0px',
-  threshold: 0.3 // Adjust this threshold as needed
+  threshold: 0.3 // soglia di visibilità dell'elemento, oltre la quale diventa visibile
 };
 
-// Create an IntersectionObserver
-const observer = new IntersectionObserver(handleIntersection, options);
+// creazione dell'observer
+const observer = new IntersectionObserver(handleIntersection, info);
 
-// Observe each carousel container
-carouselContainers.forEach(carouselContainer => {
-  observer.observe(carouselContainer);
+// applicazione dell'observer sui singoli elementi
+disappearingDivs.forEach(disappearingDiv => {
+  observer.observe(disappearingDiv);
 });
-
-
-
 
 /*carosello*/
 
-const carouselIds = ['#filmCarousel1', '#filmCarousel2', '#filmCarousel3', '#filmCarousel4', '#filmCarousel5'];
+//const carouselIds = ['#filmCarousel1', '#filmCarousel2', '#filmCarousel3', '#filmCarousel4', '#filmCarousel5'];
+
+const carouselSlides = document.querySelectorAll(".carousel");
+console.log(carouselSlides);
+let carouselIds = [];
+console.log(carouselIds);
+
+carouselSlides.forEach( function(slide) {
+    carouselIds.push('#' + slide.id);
+});
+console.log(carouselIds);
+
 let screenWidth = window.innerWidth;
 
 carouselIds.forEach((carouselId) => {
