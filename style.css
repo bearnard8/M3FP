@@ -84,9 +84,9 @@ a:hover {
 
 /*row appearing*/
 
-.disappear {
-  display: none;
-}
+/* .disappear {
+    display: none;
+} */
 
 /*scrollbar*/
 
@@ -109,9 +109,18 @@ a:hover {
 /*carosello*/
 
 @media (max-width: 767px) {
-
   .carousel-inner .carousel-item > div:first-child {
       display: block;
+  }
+    
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(50%);
+  }
+  
+  .carousel-inner .carousel-item-start.active, 
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-50%);
   }
 }
 
@@ -121,21 +130,56 @@ a:hover {
   display: flex;
 }
 
-/* medium and up screens */
 @media (min-width: 768px) {
-  
-  .carousel-inner .carousel-item-end.active,
-  .carousel-inner .carousel-item-next {
-    transform: translateX(16.6%);
+    
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(16.6%);
+    }
+    
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-16.6%);
   }
-  
-  .carousel-inner .carousel-item-start.active, 
-  .carousel-inner .carousel-item-prev {
-    transform: translateX(-16.6%);
+}
+
+@media (max-width: 576px) {
+    
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(100%);
+    }
+    
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-100%);
   }
 }
 
 .carousel-inner .carousel-item-end,
 .carousel-inner .carousel-item-start { 
-transform: translateX(0);
+    transform: translateX(0);
+}
+
+
+
+
+
+
+
+
+
+
+.disappear {
+    position: fixed;
+    top: -9999px;
+    left: -9999px;
+    width: 100%;
+    height: 100%;
+}
+  
+.visible {
+    position: relative;
+    top: 0;
+    left: 0;
 }
